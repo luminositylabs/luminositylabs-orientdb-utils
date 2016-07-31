@@ -1,0 +1,10 @@
+image: maven:3.3.9-jdk-8
+
+pipelines:
+    default:
+        - step:
+            script:
+                - mvn -V dependency:list-repositories
+                - mvn -V dependency:tree
+                - mvn -V clean
+                - mvn -V install
