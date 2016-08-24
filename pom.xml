@@ -57,7 +57,7 @@
 
     <properties>
         <!-- Dependency versions -->
-        <dependency.orientdb.version>2.2.6</dependency.orientdb.version>
+        <dependency.orientdb.version>2.2.8</dependency.orientdb.version>
     </properties>
 
     <dependencies>
