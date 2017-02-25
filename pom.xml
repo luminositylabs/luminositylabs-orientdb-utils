@@ -21,7 +21,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.0.15-SNAPSHOT</version>
+        <version>0.0.15</version>
     </parent>
 
     <artifactId>luminositylabs-orientdb-utils</artifactId>
