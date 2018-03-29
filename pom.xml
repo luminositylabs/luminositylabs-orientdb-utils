@@ -21,11 +21,11 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.0.25</version>
+        <version>0.0.26</version>
     </parent>
 
     <artifactId>luminositylabs-orientdb-utils</artifactId>
-    <version>0.0.23-SNAPSHOT</version>
+    <version>0.0.24-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>luminositylabs-orientdb-utils</name>
@@ -57,7 +57,7 @@
 
     <properties>
         <!-- Dependency versions -->
-        <dependency.orientdb.version>2.2.32</dependency.orientdb.version>
+        <dependency.orientdb.version>2.2.33</dependency.orientdb.version>
     </properties>
 
     <dependencies>
