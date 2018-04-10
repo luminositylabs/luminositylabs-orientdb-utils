@@ -1,4 +1,4 @@
-image: maven:3.5.3-jdk-8
+image: luminositylabs/maven:3.5.3-zulu8u162-8.28.01
 
 pipelines:
     default:
