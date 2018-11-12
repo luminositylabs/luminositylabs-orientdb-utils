@@ -1,19 +1,13 @@
 pipelines:
     default:
         - step:
-            image: luminositylabs/maven:3.5.4-zulu8u181-8.31.0.1
+            image: luminositylabs/maven:3.6.0-zulu8u181-8.31.0.1
             script:
                 - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:list-repositories
                 - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:tree
                 - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging clean install
         - step:
-            image: luminositylabs/maven:3.5.4-zulu9u07-9.0.7.1
-            script:
-                - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:list-repositories
-                - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:tree
-                - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging clean install
-        - step:
-            image: luminositylabs/maven:3.5.4-zulu10u02-10.3
+            image: luminositylabs/maven:3.6.0-zulu11u01-11.2.3
             script:
                 - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:list-repositories
                 - mvn -U -V -s sonatype-settings.xml -Psonatype-snapshots,sonatype-staging dependency:tree
