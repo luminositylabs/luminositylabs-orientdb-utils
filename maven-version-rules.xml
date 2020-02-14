@@ -3,14 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://mojo.codehaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
     <ignoreVersions>
-        <ignoreVersion type="regex">.*-[M|alpha|beta].*</ignoreVersion>
+        <ignoreVersion type="regex">.*-[M|RC|alpha|beta|rc].*</ignoreVersion>
     </ignoreVersions>
     <rules>
+        <!-- Pin orientdb version to 2.x -->
         <rule groupId="com.orientechnologies" artifactId="orientdb-*" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">3.*</ignoreVersion>
             </ignoreVersions>
         </rule>
+
+        <!-- Pin testng version to pre-V7 -->
         <rule groupId="org.testng" artifactId="testng" comparisonMethod="maven">
             <ignoreVersions>
                 <ignoreVersion type="regex">7\..*</ignoreVersion>
