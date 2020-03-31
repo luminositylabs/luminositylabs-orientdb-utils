@@ -23,59 +23,38 @@ import java.util.Objects;
  */
 public class OrientDBUtil {
 
-    /**
-     * The static logger instance.
-     */
+    /** The static logger instance. */
     private static final Logger logger = LoggerFactory.getLogger(OrientDBUtil.class);
 
-    /**
-     * Property name constant for specification of embedded OrientDB server.
-     */
+    /** Property name constant for specification of embedded OrientDB server. */
     public static final String PROPERTY_NAME_ODB_EMBEDDED = "orientdb.embedded";
 
-    /**
-     * Property name constant for specification of the OrientDB server engine.
-     */
+    /** Property name constant for specification of the OrientDB server engine. */
     public static final String PROPERTY_NAME_ODB_SERVER_ENGINE = "orientdb.server.engine";
 
-    /**
-     * Property name constant for specification of the hostname of the remote OrientDB server.
-     */
+    /** Property name constant for specification of the hostname of the remote OrientDB server. */
     public static final String PROPERTY_NAME_ODB_SERVER_REMOTE_HOSTNAME = "orientdb.server.remote.hostname";
 
-    /**
-     * Property name constant for specification of the port range of the remote OrientDB server.
-     */
+    /** Property name constant for specification of the port range of the remote OrientDB server. */
     public static final String PROPERTY_NAME_ODB_SERVER_REMOTE_PORT_RANGE = "orientdb.server.remote.portRange";
 
-    /**
-     * Property name constant for specification of the OrientDB database path.
-     */
+    /** Property name constant for specification of the OrientDB database path. */
     public static final String PROPERTY_NAME_ODB_DATABASE_PATH = "orientdb.databasePath";
 
-    /**
-     * Property name constant for specification of the OrientDB database name.
-     */
+    /** Property name constant for specification of the OrientDB database name. */
     public static final String PROPERTY_NAME_ODB_DATABASE_NAME = "orientdb.databaseName";
 
-    /**
-     * Property name constant for specification of the username for the OrientDB server.
-     */
+    /** Property name constant for specification of the username for the OrientDB server. */
     public static final String PROPERTY_NAME_ODB_USERNAME = "orientdb.server.username";
 
-    /**
-     * Property name constant for specification of the password for the OrientDB server.
-     */
+    /** Property name constant for specification of the password for the OrientDB server. */
     public static final String PROPERTY_NAME_ODB_PASSWORD = "orientdb.server.password";
 
-    /**
-     * The default port range of the OrientDB server's binary protocol listener.
-     */
+    /** The default port range of the OrientDB server's binary protocol listener. */
     public static final String DEFAULT_BINARY_PROTOCOL_PORTRANGE = "2424-2430";
 
-    /**
-     * Enumerates the supported OrientDB engines.
-     */
+
+    /** Enumerates the supported OrientDB engines. */
     public enum Engine {
 
         /** "paged local" engine. */
@@ -125,9 +104,7 @@ public class OrientDBUtil {
     }
 
 
-    /**
-     * Non-public default constrictor.
-     */
+    /** Non-public default constrictor. */
     protected OrientDBUtil() {
     }
 
@@ -200,6 +177,7 @@ public class OrientDBUtil {
     public static OServer startEmbeddedServer(final String username,
                                               final String password,
                                               final String portRange) throws Exception {
+        logger.debug("Starting embedded OrientDB server");
         Objects.requireNonNull(username, "Username must be specified");
         Objects.requireNonNull(password, "Password must be specified");
         String embeddedServerPortRange = DEFAULT_BINARY_PROTOCOL_PORTRANGE;
@@ -215,7 +193,7 @@ public class OrientDBUtil {
         serverConfig.network = new OServerNetworkConfiguration();
         serverConfig.network.listeners = new ArrayList<>();
         OServerNetworkListenerConfiguration networkListenerConfig = new OServerNetworkListenerConfiguration();
-        networkListenerConfig.ipAddress = "0.0.0.0";
+        networkListenerConfig.ipAddress = "0.0.0.0"; // NOPMD - It's fine to use this IP to bind to all addresses.
         networkListenerConfig.portRange = embeddedServerPortRange;
         serverConfig.network.listeners.add(networkListenerConfig);
         serverConfig.network.protocols = new ArrayList<>();
