@@ -231,3 +231,7 @@ secring.*
 
 ### Vagrant template
 .vagrant/
+
+# Files created by maven-release-plugin
+*.releaseBackup
+release.properties
