@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OrientDB Utils Test Suite" verbose="1">
+<suite name="OrientDB Utils Integration Test Suite" verbose="1">
 
-    <test name="OrientDB Util Tests">
+    <test name="OrientDB Util Integration Tests">
         <classes>
             <class name="co.luminositylabs.utils.orientdb.EmbeddedServerTest"/>
             <class name="co.luminositylabs.utils.orientdb.DBUrlBuildingTest"/>
