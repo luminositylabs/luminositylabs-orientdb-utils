@@ -25,7 +25,7 @@
     </parent>
 
     <artifactId>luminositylabs-orientdb-utils</artifactId>
-    <version>0.0.51-SNAPSHOT</version>
+    <version>0.0.51</version>
     <packaging>jar</packaging>
 
     <name>luminositylabs-orientdb-utils</name>
@@ -52,7 +52,7 @@
     <scm>
         <url>http://bitbucket.com/luminositylabs/luminositylabs-orientdb-utils</url>
         <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-orientdb-utils.git</connection>
-        <tag>HEAD</tag>
+        <tag>luminositylabs-orientdb-utils-0.0.51</tag>
     </scm>
 
     <properties>
