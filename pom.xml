@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- Copyright (c) 2016 Luminosity Labs LLC. All rights reserved.
+ Copyright (c) 2016-2021 Luminosity Labs LLC. All rights reserved.
 
  Licensed to the Apache Software Foundation (ASF) under one or more
  contributor license agreements.  See the NOTICE file distributed with this
@@ -21,7 +21,7 @@
     <parent>
         <groupId>co.luminositylabs.oss</groupId>
         <artifactId>luminositylabs-oss-parent</artifactId>
-        <version>0.1.23</version>
+        <version>0.1.24-SNAPSHOT</version>
     </parent>
 
     <artifactId>luminositylabs-orientdb-utils</artifactId>
