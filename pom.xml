@@ -30,7 +30,7 @@
 
     <name>luminositylabs-orientdb-utils</name>
     <description>Utilities for use with OrientDB</description>
-    <url>http://bitbucket.com/luminositylabs/luminositylabs-orientdb-utils</url>
+    <url>https://github.com/luminositylabs/luminositylabs-orientdb-utils</url>
 
     <licenses>
         <license>
@@ -45,13 +45,13 @@
             <name>Luminosity Labs Team</name>
             <email>luminositylabs@gmail.com</email>
             <organization>Luminosity Labs LLC</organization>
-            <organizationUrl>http://bitbucket.com/luminositylabs</organizationUrl>
+            <organizationUrl>https://github.com/luminositylabs/</organizationUrl>
         </developer>
     </developers>
 
     <scm>
         <url>http://bitbucket.com/luminositylabs/luminositylabs-orientdb-utils</url>
-        <connection>scm:git:https://bitbucket.org/luminositylabs/luminositylabs-orientdb-utils.git</connection>
+        <connection>scm:git:https://github.com/luminositylabs/luminositylabs-orientdb-utils.git</connection>
         <tag>HEAD</tag>
     </scm>
 
