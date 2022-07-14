@@ -13,6 +13,13 @@
             </ignoreVersions>
         </rule>
 
+        <!-- Pin checkstyle version to pre-V10 -->
+        <rule groupId="com.puppycrawl.tools" artifactId="checkstyle" comparisonMethod="maven">
+            <ignoreVersions>
+                <ignoreVersion type="regex">10\..*</ignoreVersion>
+            </ignoreVersions>
+        </rule>
+
         <!-- Pin testng version to pre-V7 -->
         <rule groupId="org.testng" artifactId="testng" comparisonMethod="maven">
             <ignoreVersions>
